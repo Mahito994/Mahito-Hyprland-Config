@@ -56,3 +56,5 @@ yazi/
 xsettingsd/
 go/
 btop/
+htop/
+~/.config/htop/htoprc
