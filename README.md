@@ -13,6 +13,7 @@ I hope ya all are enjoing the rice/config :D
 - [Dependencies](#dependencies)
 - [Installation](#installation)
 - [Theme](#theme)
+- [Oh-My-ZSH installation](#oh-my-zsh-installation)
 
 ---
 
@@ -112,3 +113,36 @@ git clone https://github.com/Mahito994/Arch-Hyprland-Dots.git ~/.config
 
 - [GTK-Theme](https://github.com/UnnatShaneshwar/AtomOneDarkTheme)
 - [Kitty](https://github.com/dexpota/kitty-themes/blob/master/themes/OneDark.conf)
+
+---
+
+##  Oh-My-ZSH installation
+
+#### 1. Make sure that u have installed zsh and curl
+   
+   For example on Arch based distros:
+```
+yay -S zsh curl
+```
+#### 2. Clone the Oh-My-ZSH script with curl
+```
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
+(Note: Make sure to select yes when they are asking "Do u want to set ur shell to zsh?")
+#### 3. Install and set the theme to powerlevel10k/powerlevel10k
+
+Set the theme in the `.zshrc` file to **powerlevel10k/powerlevel10k**. For example:
+```
+nano .zshrc
+```
+After that download the powerlevel10k repository with this script:
+```
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k"
+```
+After that restart your Terminal and a setup/configure script will start and u can cusomize it. U can always change/redo it with:
+```
+p10k configure
+```
+
+---
+
