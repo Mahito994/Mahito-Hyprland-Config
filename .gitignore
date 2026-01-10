@@ -1,0 +1,58 @@
+# Allgemein
+**/cache/
+**/Cache/
+**/*.log
+**/*.tmp
+**/session/
+**/sessions/
+
+# GTK / QT
+gtk-3.0/bookmarks
+gtk-4.0/bookmarks
+qt5ct/colors/
+qt6ct/colors/
+
+# Browser
+chromium/
+google-chrome/
+BraveSoftware/
+
+# Electron Apps
+discord/
+spotify/
+signal/
+
+# VSCode
+Code/User/workspaceStorage/
+
+# Neovim
+nvim/.netrwhist
+nvim/plugin/
+
+# Hyprland Runtime
+hypr/hyprlandd.conf
+hypr/xdg-portal-hyprland/
+
+# Secrets (falls vorhanden)
+**/*token*
+**/*secret*
+**/*key*
+
+# etc
+Thunar/
+VSCodium/
+yay/
+ristretto/
+dconf/
+pulse/
+pavucontrol.ini
+user-dirs.dirs
+user-dirs.locale
+xfce4/
+~/.config/obs-studio/
+Vencord/
+cava/
+yazi/
+xsettingsd/
+go/
+btop/
