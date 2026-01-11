@@ -18,6 +18,9 @@ I hope ya all are enjoing the rice/config :D
 ---
 
 ## Screenshots
+<div align="center">
+  <img src="media/screenshots_github/2026-01-11-153325_hyprshot.png" width="100%" />
+</div>
 
 ---
 
