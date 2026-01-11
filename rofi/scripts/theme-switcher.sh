@@ -7,7 +7,11 @@ KITTY_THEME_DIR="$HOME/.config/kitty/kitty-themes"
 WAYBAR_CSS="$HOME/.config/waybar/style.css"
 WAYBAR_COLOR_DIR="$HOME/.config/waybar/colors/"
 
-ROFI_CMD="rofi -dmenu -i -p Theme"
+dir="$HOME/.config/rofi/rofi-themes-collection/themes/"
+theme='AtomOneDark'
+
+## Run
+ROFI_CMD="rofi -dmenu -theme ${dir}/${theme}.rasi -i -p Theme "
 # ----------------------------------------
 
 # Get available themes from kitty theme directory
