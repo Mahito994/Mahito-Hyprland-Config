@@ -2,19 +2,33 @@
     "position": "top",
     "margin-top": 15,
     "modules-left": [
+        "custom/archicon",
+        "custom/weather"
+    ],
+    "modules-center": [
         "clock",
         "hyprland/workspaces"
     ],
-    "modules-center": [
-        "tray"
-    ],
     "modules-right": [
         "pulseaudio",
-        "memory",
         "network",
+        "memory",
         "battery",
         "custom/notification"
     ],
+    "custom/archicon": {
+        "format": "",
+        "tooltip": false,
+        "on-click": "rofi -show drun"
+    },
+    "custom/weather": {
+        "format": "{}",
+        "tooltip": true,
+        "interval": 3600,
+        "exec": "python ~/.config/waybar/scripts/waybar-wttr.py",
+        "return-type": "json",
+        "on-click": "xdg-open 'https://wttr.in/Stuttgart'"
+    },
     "clock": {
         "interval": 60,
         "format": "{:%H:%M}",
