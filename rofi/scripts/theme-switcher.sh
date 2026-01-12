@@ -7,8 +7,12 @@ KITTY_THEME_DIR="$HOME/.config/kitty/kitty-themes"
 WAYBAR_CSS="$HOME/.config/waybar/style.css"
 WAYBAR_COLOR_DIR="$HOME/.config/waybar/colors/"
 
+SWAYNC_COLOR_DIR="$HOME/.config/swaync/colors/"
+
+ROFI_COLOR_DIR="$HOME/.config/rofi/rofi-themes-collection/themes/"
+
 dir="$HOME/.config/rofi/rofi-themes-collection/themes/"
-theme='AtomOneDark'
+theme='current'
 
 ## Run
 ROFI_CMD="rofi -dmenu -theme ${dir}/${theme}.rasi -i -p Theme "
@@ -31,10 +35,16 @@ sed -i \
 # Reload kitty
 pkill -USR1 kitty
 
+# ---------------- APPLY SWAYNC----------------
+ln -sf "$WAYBAR_COLOR_DIR/$selected.css" "$SWAYNC_COLOR_DIR/current.css"
+
 # ---------------- APPLY WAYBAR ---------------
 ln -sf "$WAYBAR_COLOR_DIR/$selected.css" "$WAYBAR_COLOR_DIR/current.css"
 
 ./.config/waybar/scripts/launch.sh
 
+# ---------------- APPLY ROFI -----------------
+ln -sf "$ROFI_COLOR_DIR/$selected.rasi" "$ROFI_COLOR_DIR/current.rasi"
+
 # ---------------- SENDS NOTIFICATION ---------
-notify-send "Theme changed" "$selected applied to Kitty & Waybar"
+notify-send "Theme changed" "$selected applied to Kitty, Waybar & Swaync"

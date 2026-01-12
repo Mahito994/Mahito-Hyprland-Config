@@ -12,7 +12,7 @@
 ## style-11    style-12    style-13    style-14    style-15
 
 dir="$HOME/.config/rofi/rofi-themes-collection/themes/"
-theme='AtomOneDark'
+theme='current'
 
 ## Run
 rofi \
