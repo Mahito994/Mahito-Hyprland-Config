@@ -11,6 +11,10 @@ SWAYNC_COLOR_DIR="$HOME/.config/swaync/colors/"
 
 ROFI_COLOR_DIR="$HOME/.config/rofi/rofi-themes-collection/themes/"
 
+HYPR_COLOR_DIR="$HOME/.config/hypr/theme/"
+
+GTK_MAP="$HOME/.config/rofi/scripts/gtk-map.conf"
+
 dir="$HOME/.config/rofi/rofi-themes-collection/themes/"
 theme='current'
 
@@ -46,5 +50,17 @@ ln -sf "$WAYBAR_COLOR_DIR/$selected.css" "$WAYBAR_COLOR_DIR/current.css"
 # ---------------- APPLY ROFI -----------------
 ln -sf "$ROFI_COLOR_DIR/$selected.rasi" "$ROFI_COLOR_DIR/current.rasi"
 
+# ---------------- APPLT HYPRLAND -------------
+ln -sf "$HYPR_COLOR_DIR/$selected.conf" "$HYPR_COLOR_DIR/current.conf"
+
+# ---------------- APPLY GTK ------------------
+GTK_THEME=$(grep "^$selected=" "$GTK_MAP" | cut -d= -f2)
+
+if [ -n "$GTK_THEME" ]; then
+  gsettings set org.gnome.desktop.interface gtk-theme "$GTK_THEME"
+else
+  notify-send "GTK Theme" "No GTK mapping for $selected"
+fi
+
 # ---------------- SENDS NOTIFICATION ---------
-notify-send "Theme changed" "$selected applied to Kitty, Waybar & Swaync"
+notify-send "Theme changed" "$selected applied to Hyprland, Kitty, Waybar & Swaync"
