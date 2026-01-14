@@ -1,7 +1,7 @@
 # Hyprland Configuration Files by Mahito
 
 My Personal dotfiles. I used a fresh install of **Arch Linux** + **Hyprland** + **Waybar** + **SwayNC**.
-My Dotfiles are inspired by the dotfiles from [@saneAspect](https://www.youtube.com/@saneAspect) and the [Atom One Dark Theme](#theme).
+My dotfiles are inspired by my first rice but my arch broke and I lost everything. The Rice is mainly based on the [Atom One Dark Theme](#theme) but I later added new themes and a theme switcher based on rofi.
 It took me a few days to rice everything, but it really payed off at the end and i am proud of it.
 I hope ya all are enjoing the rice/config :D
 
