@@ -15,6 +15,8 @@ HYPR_COLOR_DIR="$HOME/.config/hypr/theme/"
 
 GTK_MAP="$HOME/.config/rofi/scripts/gtk-map.conf"
 
+LY_THEME_DIR="/etc/ly/themes"
+
 dir="$HOME/.config/rofi/rofi-themes-collection/themes/"
 theme='current'
 
